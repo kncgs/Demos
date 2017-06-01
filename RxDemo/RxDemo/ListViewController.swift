@@ -18,6 +18,7 @@ class ListViewController: UIViewController {
     private let disposedBag = DisposeBag()
     
     private let dataSource = RxTableViewSectionedReloadDataSource<StudentSection>()
+//    private let dataSource = RxTableViewSectionedAnimatedDataSource<StudentSection>()
     
     convenience init(viewModel: ListViewModel) {
         self.init(nibName: "ListViewController", bundle: nil)
@@ -57,6 +58,7 @@ class ListViewController: UIViewController {
             .itemSelected
             .bind(to: viewModel.itemSelected)
             .disposed(by: disposedBag)
+        
         
         viewModel.navigationBarTitle
             .drive(self.rx.title)

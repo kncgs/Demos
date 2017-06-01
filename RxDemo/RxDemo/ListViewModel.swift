@@ -17,6 +17,8 @@ class ListViewModel: NSObject {
     
     let viewDidLoad: PublishSubject<Void> = .init()
     let itemSelected: PublishSubject<IndexPath> = .init()
+//    let itemSelected: PublishSubject<Student> = .init()
+    
     
     
     let navigationBarTitle: Driver<String>
@@ -27,6 +29,8 @@ class ListViewModel: NSObject {
     
     
     init(provider: RxMoyaProvider<ApiProvider>) {
+        
+        let disposeBag = DisposeBag()
         
         navigationBarTitle = .just("Students")
         
@@ -62,7 +66,15 @@ class ListViewModel: NSObject {
                 }
                 .asDriver(onErrorJustReturn: [])
         
-        pushDetailViewModel =
+        
+        let changedNameReceiver: Variable<String> = .init("")
+        
+//        pushDetailViewModel =
+//            itemSelected
+//                .map { DetailViewModel(provider, student: $0) }
+//                .asDriverOnErrorJustComplete()
+        
+        let selectedItem =
             Observable
                 .combineLatest(
                     section.asObservable(),
@@ -70,8 +82,37 @@ class ListViewModel: NSObject {
                 )
                 .filter { !$0.0.isEmpty }
                 .map { $0.0[0].items[$0.1.row] }
-                .map { DetailViewModel(provider, student: $0) }
+                .shareReplay(1)
+        
+        pushDetailViewModel =
+                selectedItem
+                .map { student -> DetailViewModel in
+                    let viewModel = DetailViewModel(provider, student: student)
+                    
+                    viewModel.changedNameOutput
+                        .bind(to: changedNameReceiver)
+                        .disposed(by: disposeBag)
+                    
+                    return viewModel
+                }
                 .asDriverOnErrorJustComplete()
+        
+        
+        Observable
+            .combineLatest(
+                changedNameReceiver.asObservable(),
+                section.asObservable(),
+                itemSelected.asObservable()
+            )
+            .subscribe(onNext: { data in
+                var items = data.1[0].items
+                var item = items[data.2.row]
+                item.name = data.0
+                items.remove(at: data.2.row)
+                items.insert(item, at: data.2.row)
+            })
+            .disposed(by: disposeBag)
+        
             
     }
     

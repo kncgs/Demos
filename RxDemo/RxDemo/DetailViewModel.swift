@@ -19,18 +19,21 @@ class DetailViewModel: NSObject {
     let textFieldText: PublishSubject<String?> = .init()
     
     let nameLabelText: Driver<String?>
-    let ageLabelText: Driver<String?>
-    let confirmButtonEnabled: Variable<Bool> = .init(false)
-    let popViewController: Driver<Void>
+    let confirmButtonEnabled: Variable<Bool>
+    let popViewController: Variable<Void>
+    let changedNameOutput: Observable<String>
     
     private let disposedBag = DisposeBag()
     
     init(_ provider: RxMoyaProvider<ApiProvider>, student: Student) {
         
         nameLabelText = .just(student.name)
-        ageLabelText = .just("\(student.age ?? 0)")
         
-        popViewController = cancelButtonDidTap.asDriverOnErrorJustComplete()
+        confirmButtonEnabled = .init(false)
+        popViewController = .init()
+        
+        cancelButtonDidTap.bind(to: popViewController).disposed(by: disposedBag)
+        confirmButtonDidTap.bind(to: popViewController).disposed(by: disposedBag)
         
         
         textFieldText
@@ -44,11 +47,16 @@ class DetailViewModel: NSObject {
             .bind(to: confirmButtonEnabled)
             .disposed(by: disposedBag)
         
-        Observable.combineLatest(textFieldText.asObserver(), confirmButtonDidTap.asObservable())
-        .subscribe(onNext: { (data) in
-            print("===\(data.0)")
-        })
-        .disposed(by: disposedBag)
+        
+        changedNameOutput =
+            Observable
+                .combineLatest(
+                    textFieldText.asObserver(),
+                    confirmButtonDidTap.asObservable()
+                )
+                .map { $0.0 }
+                .unwrap()
+        
         
     }
 

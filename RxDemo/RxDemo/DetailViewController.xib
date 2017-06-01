@@ -11,7 +11,6 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DetailViewController" customModule="RxDemo" customModuleProvider="target">
             <connections>
-                <outlet property="ageLabel" destination="AiU-bV-f2e" id="5kq-8f-vba"/>
                 <outlet property="cancelButton" destination="SwR-Ru-3oz" id="si7-Bb-uqL"/>
                 <outlet property="confirmButton" destination="rVW-cc-T8z" id="KCh-hy-43Q"/>
                 <outlet property="nameLabel" destination="ZD1-tj-r33" id="zPi-Qf-nXo"/>
@@ -25,13 +24,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZD1-tj-r33">
-                    <rect key="frame" x="30" y="100" width="54.5" height="21"/>
-                    <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="18"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AiU-bV-f2e">
-                    <rect key="frame" x="290.5" y="100" width="54.5" height="21"/>
+                    <rect key="frame" x="30" y="160" width="54.5" height="21"/>
                     <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="18"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
@@ -43,27 +36,25 @@
                     <textInputTraits key="textInputTraits"/>
                 </textField>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SwR-Ru-3oz">
-                    <rect key="frame" x="30" y="321" width="31" height="30"/>
+                    <rect key="frame" x="92" y="291" width="31" height="30"/>
                     <state key="normal" title="取消"/>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rVW-cc-T8z">
-                    <rect key="frame" x="314" y="321" width="31" height="30"/>
+                    <rect key="frame" x="252" y="291" width="31" height="30"/>
                     <state key="normal" title="确定"/>
                 </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstAttribute="trailing" secondItem="AiU-bV-f2e" secondAttribute="trailing" constant="30" id="5yl-je-PAI"/>
+                <constraint firstItem="Xeu-ZZ-I6C" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="30" id="7am-kH-rfn"/>
+                <constraint firstAttribute="trailing" secondItem="Xeu-ZZ-I6C" secondAttribute="trailing" constant="30" id="8C0-X7-DUq"/>
                 <constraint firstItem="ZD1-tj-r33" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="30" id="8Z6-zM-rIr"/>
-                <constraint firstItem="rVW-cc-T8z" firstAttribute="top" secondItem="AiU-bV-f2e" secondAttribute="bottom" constant="200" id="BHA-iX-8l0"/>
-                <constraint firstItem="SwR-Ru-3oz" firstAttribute="top" secondItem="ZD1-tj-r33" secondAttribute="bottom" constant="200" id="HBQ-41-48z"/>
-                <constraint firstAttribute="trailing" secondItem="Xeu-ZZ-I6C" secondAttribute="trailing" constant="30" id="W24-C8-nv0"/>
-                <constraint firstItem="Xeu-ZZ-I6C" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="30" id="WnE-uT-6t3"/>
-                <constraint firstItem="ZD1-tj-r33" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="100" id="aid-Sn-KHB"/>
-                <constraint firstAttribute="trailing" secondItem="rVW-cc-T8z" secondAttribute="trailing" constant="30" id="bst-Kq-51g"/>
-                <constraint firstItem="AiU-bV-f2e" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="100" id="fvi-rC-BTZ"/>
-                <constraint firstItem="Xeu-ZZ-I6C" firstAttribute="top" secondItem="AiU-bV-f2e" secondAttribute="bottom" constant="100" id="rI2-pQ-i5w"/>
-                <constraint firstItem="SwR-Ru-3oz" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="30" id="yoV-4u-v0S"/>
+                <constraint firstItem="SwR-Ru-3oz" firstAttribute="top" secondItem="Xeu-ZZ-I6C" secondAttribute="bottom" constant="40" id="DWU-rc-zgu"/>
+                <constraint firstItem="Xeu-ZZ-I6C" firstAttribute="top" secondItem="ZD1-tj-r33" secondAttribute="bottom" constant="40" id="JpI-yM-8XP"/>
+                <constraint firstItem="ZD1-tj-r33" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="160" id="aid-Sn-KHB"/>
+                <constraint firstItem="rVW-cc-T8z" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" constant="80" id="jxy-eS-c5h"/>
+                <constraint firstItem="SwR-Ru-3oz" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" constant="-80" id="nbO-Rj-OIC"/>
+                <constraint firstItem="rVW-cc-T8z" firstAttribute="top" secondItem="Xeu-ZZ-I6C" secondAttribute="bottom" constant="40" id="z0X-Lz-9di"/>
             </constraints>
             <point key="canvasLocation" x="-89.5" y="-10.5"/>
         </view>

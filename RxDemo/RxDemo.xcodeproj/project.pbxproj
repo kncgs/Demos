@@ -128,7 +128,7 @@
 				843EF5491EE9520D0037EBDB /* List */,
 				843EF54A1EE952180037EBDB /* Detail */,
 				84D224961EE7C351005F96C8 /* Service */,
-				84D224971EE7C364005F96C8 /* _+Rx */,
+				84D224971EE7C364005F96C8 /* *Rx */,
 				84D224981EE7C3B2005F96C8 /* Ex */,
 				844DEEA91EE53E8E0024DECF /* Assets.xcassets */,
 				844DEEAB1EE53E8E0024DECF /* LaunchScreen.storyboard */,
@@ -179,14 +179,14 @@
 			name = Service;
 			sourceTree = "<group>";
 		};
-		84D224971EE7C364005F96C8 /* _+Rx */ = {
+		84D224971EE7C364005F96C8 /* *Rx */ = {
 			isa = PBXGroup;
 			children = (
 				84CAA31E1EE5497C0021EFD0 /* UIViewController+Rx.swift */,
 				84CAA32C1EE554FE0021EFD0 /* MoyaResponse+Rx.swift */,
 				84CAA3301EE55F300021EFD0 /* PKHUD+Rx.swift */,
 			);
-			name = "_+Rx";
+			name = "*Rx";
 			sourceTree = "<group>";
 		};
 		84D224981EE7C3B2005F96C8 /* Ex */ = {

@@ -12,7 +12,6 @@ import RxCocoa
 class DetailViewController: UIViewController {
 
     @IBOutlet weak var nameLabel: UILabel!
-    @IBOutlet weak var ageLabel: UILabel!
     @IBOutlet weak var textField: UITextField!
     @IBOutlet weak var cancelButton: UIButton!
     @IBOutlet weak var confirmButton: UIButton!
@@ -60,9 +59,6 @@ class DetailViewController: UIViewController {
             .drive(nameLabel.rx.text)
             .disposed(by: disposedBag)
         
-        viewModel.ageLabelText
-            .drive(ageLabel.rx.text)
-            .disposed(by: disposedBag)
         
         viewModel.nameLabelText
             .drive(textField.rx.text)
@@ -74,6 +70,8 @@ class DetailViewController: UIViewController {
             .disposed(by: disposedBag)
         
         viewModel.popViewController
+            .asDriver()
+            .skip(1)
             .drive(onNext: { [unowned self] _ in
                 self.navigationController?.popViewController(animated: true)
             })
