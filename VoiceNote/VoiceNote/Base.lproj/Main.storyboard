@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="P0X-8e-hFt">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="U10-HX-kCS">
+            <objects>
+                <navigationController id="P0X-8e-hFt" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="xGx-cT-KXm">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="egw-y1-2qs" kind="relationship" relationship="rootViewController" id="bjW-kV-qcB"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Myp-fp-Iun" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-34" y="63"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="jMu-wz-QUT">
+            <objects>
+                <viewController id="egw-y1-2qs" customClass="ViewController" customModule="VoiceNote" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="oJ6-M0-Zjw"/>
+                        <viewControllerLayoutGuide type="bottom" id="LDe-j1-NfX"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="zwo-fs-xPC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cirle_normal" highlightedImage="cirle_highlight" translatesAutoresizingMaskIntoConstraints="NO" id="leJ-pV-ItL">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="Noy-dA-wSb"/>
+                                    <constraint firstAttribute="height" constant="100" id="nLd-kq-mTG"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fee-mq-osw">
+                                <state key="normal" image="record_normal"/>
+                            </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eiY-qp-G5E">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="80t-c5-UPD"/>
+                                    <constraint firstAttribute="width" constant="70" id="oTY-Ea-PLp"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="play"/>
+                                <connections>
+                                    <action selector="playBtnClicked" destination="egw-y1-2qs" eventType="touchUpInside" id="MVr-Ux-YZO"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="LDe-j1-NfX" firstAttribute="top" secondItem="leJ-pV-ItL" secondAttribute="bottom" constant="50" id="2Cj-gp-ugZ"/>
+                            <constraint firstItem="Fee-mq-osw" firstAttribute="centerX" secondItem="eiY-qp-G5E" secondAttribute="centerX" id="3P5-jp-CHw"/>
+                            <constraint firstItem="Fee-mq-osw" firstAttribute="height" secondItem="leJ-pV-ItL" secondAttribute="height" id="79R-fw-Ulz"/>
+                            <constraint firstItem="Fee-mq-osw" firstAttribute="bottom" secondItem="leJ-pV-ItL" secondAttribute="bottom" id="9vF-OM-Nps"/>
+                            <constraint firstItem="Fee-mq-osw" firstAttribute="width" secondItem="leJ-pV-ItL" secondAttribute="width" id="JZt-XJ-WoR"/>
+                            <constraint firstItem="leJ-pV-ItL" firstAttribute="centerX" secondItem="zwo-fs-xPC" secondAttribute="centerX" id="c0T-Kf-G5O"/>
+                            <constraint firstItem="Fee-mq-osw" firstAttribute="leading" secondItem="leJ-pV-ItL" secondAttribute="leading" id="frP-Op-Nq7"/>
+                            <constraint firstItem="Fee-mq-osw" firstAttribute="top" secondItem="eiY-qp-G5E" secondAttribute="bottom" constant="100" id="hUu-ve-pfJ"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="em6-0h-0C2">
+                        <barButtonItem key="rightBarButtonItem" title="table" id="bHe-4S-KvN">
+                            <connections>
+                                <segue destination="nHS-XT-Ixy" kind="show" id="WCP-Ja-EPR"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="circleImgView" destination="leJ-pV-ItL" id="1UM-fV-o5p"/>
+                        <outlet property="playButton" destination="eiY-qp-G5E" id="b8q-hI-dKa"/>
+                        <outlet property="recordButton" destination="Fee-mq-osw" id="mff-yZ-SRW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YJm-hf-4Ya" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="768.79999999999995" y="62.518740629685162"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="o5n-n1-fNN">
+            <objects>
+                <viewController id="nHS-XT-Ixy" customClass="DetailViewController" customModule="VoiceNote" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="e6O-gg-pBk"/>
+                        <viewControllerLayoutGuide type="bottom" id="493-b3-hbx"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="xGZ-yH-tWm">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hls-Cg-xaH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1641" y="65"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="cirle_highlight" width="90" height="90"/>
+        <image name="cirle_normal" width="90" height="90"/>
+        <image name="record_normal" width="90" height="90"/>
+    </resources>
+</document>

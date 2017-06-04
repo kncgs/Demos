@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="RecorderCell" rowHeight="50" id="KGk-i7-Jjw" customClass="RecorderCell" customModule="VoiceNote" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="310" height="50"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <frame key="frameInset" width="310" height="49.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rgf-tw-cvg">
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="30" id="9Yk-Os-LaY"/>
+                            <constraint firstAttribute="width" constant="74" id="QX9-Vt-NZC"/>
+                        </constraints>
+                        <state key="normal" title="播放"/>
+                        <state key="selected" title="正在播放"/>
+                        <connections>
+                            <action selector="playOrPause:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="TQY-Xi-O1A"/>
+                        </connections>
+                    </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d7n-iM-We9">
+                        <color key="backgroundColor" red="0.0" green="1" blue="0.15358874201774597" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="30" id="pQE-Xa-Zz0"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="Rgf-tw-cvg" firstAttribute="leading" secondItem="d7n-iM-We9" secondAttribute="trailing" constant="10" id="7ib-XE-RNo"/>
+                    <constraint firstItem="d7n-iM-We9" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="10" id="9f6-ak-wYG"/>
+                    <constraint firstItem="Rgf-tw-cvg" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="Zgy-d5-gGU"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="Rgf-tw-cvg" secondAttribute="trailing" constant="6" id="az1-Oa-IiT"/>
+                    <constraint firstItem="d7n-iM-We9" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="kM4-Zw-Pyc"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="nameLabel" destination="d7n-iM-We9" id="Qt6-dG-6sU"/>
+                <outlet property="playButton" destination="Rgf-tw-cvg" id="9K0-NC-RH3"/>
+            </connections>
+            <point key="canvasLocation" x="-823" y="-468"/>
+        </tableViewCell>
+    </objects>
+</document>
