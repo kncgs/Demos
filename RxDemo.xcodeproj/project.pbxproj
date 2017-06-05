@@ -8,20 +8,28 @@
 
 /* Begin PBXBuildFile section */
 		844DEEA31EE53E8E0024DECF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844DEEA21EE53E8E0024DECF /* AppDelegate.swift */; };
-		844DEEA51EE53E8E0024DECF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844DEEA41EE53E8E0024DECF /* ViewController.swift */; };
+		844DEEA51EE53E8E0024DECF /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844DEEA41EE53E8E0024DECF /* ListViewController.swift */; };
 		844DEEA81EE53E8E0024DECF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 844DEEA61EE53E8E0024DECF /* Main.storyboard */; };
 		844DEEAA1EE53E8E0024DECF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 844DEEA91EE53E8E0024DECF /* Assets.xcassets */; };
 		844DEEAD1EE53E8E0024DECF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 844DEEAB1EE53E8E0024DECF /* LaunchScreen.storyboard */; };
+		844DEEB51EE53F3A0024DECF /* ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844DEEB41EE53F3A0024DECF /* ListViewModel.swift */; };
+		844DEEB71EE53F840024DECF /* ApiProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844DEEB61EE53F840024DECF /* ApiProvider.swift */; };
+		CE3A881A83BAD7880DE82642 /* Pods_RxDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63FE9CA13F7DE8EFA0E33D91 /* Pods_RxDemo.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		63FE9CA13F7DE8EFA0E33D91 /* Pods_RxDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RxDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		844DEE9F1EE53E8E0024DECF /* RxDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RxDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		844DEEA21EE53E8E0024DECF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		844DEEA41EE53E8E0024DECF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		844DEEA41EE53E8E0024DECF /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		844DEEA71EE53E8E0024DECF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		844DEEA91EE53E8E0024DECF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		844DEEAC1EE53E8E0024DECF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		844DEEAE1EE53E8E0024DECF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		844DEEB41EE53F3A0024DECF /* ListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListViewModel.swift; sourceTree = "<group>"; };
+		844DEEB61EE53F840024DECF /* ApiProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiProvider.swift; sourceTree = "<group>"; };
+		C0F485B7CBED2599046E0E25 /* Pods-RxDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RxDemo/Pods-RxDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		F09228C5B07B550D2BEEC0F0 /* Pods-RxDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-RxDemo/Pods-RxDemo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE3A881A83BAD7880DE82642 /* Pods_RxDemo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +49,8 @@
 			children = (
 				844DEEA11EE53E8E0024DECF /* RxDemo */,
 				844DEEA01EE53E8E0024DECF /* Products */,
+				E08F990893F62259F2950914 /* Pods */,
+				8947BB0A2B829C9F8253BE2C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -55,13 +66,32 @@
 			isa = PBXGroup;
 			children = (
 				844DEEA21EE53E8E0024DECF /* AppDelegate.swift */,
-				844DEEA41EE53E8E0024DECF /* ViewController.swift */,
+				844DEEA41EE53E8E0024DECF /* ListViewController.swift */,
+				844DEEB41EE53F3A0024DECF /* ListViewModel.swift */,
+				844DEEB61EE53F840024DECF /* ApiProvider.swift */,
 				844DEEA61EE53E8E0024DECF /* Main.storyboard */,
 				844DEEA91EE53E8E0024DECF /* Assets.xcassets */,
 				844DEEAB1EE53E8E0024DECF /* LaunchScreen.storyboard */,
 				844DEEAE1EE53E8E0024DECF /* Info.plist */,
 			);
 			path = RxDemo;
+			sourceTree = "<group>";
+		};
+		8947BB0A2B829C9F8253BE2C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				63FE9CA13F7DE8EFA0E33D91 /* Pods_RxDemo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E08F990893F62259F2950914 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C0F485B7CBED2599046E0E25 /* Pods-RxDemo.debug.xcconfig */,
+				F09228C5B07B550D2BEEC0F0 /* Pods-RxDemo.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +101,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 844DEEB11EE53E8E0024DECF /* Build configuration list for PBXNativeTarget "RxDemo" */;
 			buildPhases = (
+				164C33F9CFF70EF4299B1C5B /* [CP] Check Pods Manifest.lock */,
 				844DEE9B1EE53E8E0024DECF /* Sources */,
 				844DEE9C1EE53E8E0024DECF /* Frameworks */,
 				844DEE9D1EE53E8E0024DECF /* Resources */,
+				10A53319ED4CE8CABB3E923E /* [CP] Embed Pods Frameworks */,
+				25CAAC6484771A0D1DB87F50 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -131,13 +164,63 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		10A53319ED4CE8CABB3E923E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RxDemo/Pods-RxDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		164C33F9CFF70EF4299B1C5B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		25CAAC6484771A0D1DB87F50 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RxDemo/Pods-RxDemo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		844DEE9B1EE53E8E0024DECF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				844DEEA51EE53E8E0024DECF /* ViewController.swift in Sources */,
+				844DEEA51EE53E8E0024DECF /* ListViewController.swift in Sources */,
+				844DEEB71EE53F840024DECF /* ApiProvider.swift in Sources */,
 				844DEEA31EE53E8E0024DECF /* AppDelegate.swift in Sources */,
+				844DEEB51EE53F3A0024DECF /* ListViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,6 +343,7 @@
 		};
 		844DEEB21EE53E8E0024DECF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C0F485B7CBED2599046E0E25 /* Pods-RxDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = RxDemo/Info.plist;
@@ -272,6 +356,7 @@
 		};
 		844DEEB31EE53E8E0024DECF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F09228C5B07B550D2BEEC0F0 /* Pods-RxDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = RxDemo/Info.plist;
