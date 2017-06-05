@@ -1,11 +1,12 @@
 PODS:
   - Alamofire (4.4.0)
   - HandyJSON (1.7.1)
-  - Moya (8.0.3):
-    - Moya/Core (= 8.0.3)
   - Moya/Core (8.0.3):
     - Alamofire (~> 4.1)
     - Result (~> 3.0)
+  - Moya/RxSwift (8.0.3):
+    - Moya/Core
+    - RxSwift (~> 3.0)
   - Result (3.2.1)
   - RxCocoa (3.4.1):
     - RxSwift (~> 3.4)
@@ -17,7 +18,7 @@ PODS:
 
 DEPENDENCIES:
   - HandyJSON
-  - Moya
+  - Moya/RxSwift
   - RxCocoa
   - RxSwift (~> 3.4.1)
   - RxSwiftExt
@@ -31,6 +32,6 @@ SPEC CHECKSUMS:
   RxSwift: 656f8fbeca5bc372121a72d9ebdd3cd3bc0ffade
   RxSwiftExt: 72278e4a84f35324a82a8dd359859782706576a6
 
-PODFILE CHECKSUM: 7c1a67a32812744665c15fcb6922072c8cae887a
+PODFILE CHECKSUM: 4d96422755eeaf2c2c9cb4101c815b064b75f426
 
 COCOAPODS: 1.2.1

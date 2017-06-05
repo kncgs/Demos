@@ -9,7 +9,7 @@ target 'RxDemo' do
   pod 'RxSwift', '~> 3.4.1'
   pod 'RxCocoa'
   pod 'RxSwiftExt'
-  pod 'Moya'
+  pod 'Moya/RxSwift'
   pod 'HandyJSON'
 
 end
