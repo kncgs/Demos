@@ -16,12 +16,6 @@ class StudentCell: UITableViewCell {
         // Initialization code
     }
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
-    
     func config(_ model: Student) {
         nameLabel.text = model.name
         ageLabel.text = "\(model.age ?? 0)"

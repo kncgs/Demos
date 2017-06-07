@@ -21,7 +21,6 @@
 		84CAA32D1EE554FE0021EFD0 /* MoyaResponse+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CAA32C1EE554FE0021EFD0 /* MoyaResponse+Rx.swift */; };
 		84CAA32F1EE55B390021EFD0 /* UITableView+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CAA32E1EE55B390021EFD0 /* UITableView+Ex.swift */; };
 		84CAA3311EE55F300021EFD0 /* PKHUD+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CAA3301EE55F300021EFD0 /* PKHUD+Rx.swift */; };
-		84CAA3331EE571140021EFD0 /* HandJSON+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CAA3321EE571140021EFD0 /* HandJSON+Rx.swift */; };
 		CE3A881A83BAD7880DE82642 /* Pods_RxDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63FE9CA13F7DE8EFA0E33D91 /* Pods_RxDemo.framework */; };
 /* End PBXBuildFile section */
 
@@ -43,7 +42,6 @@
 		84CAA32C1EE554FE0021EFD0 /* MoyaResponse+Rx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MoyaResponse+Rx.swift"; sourceTree = "<group>"; };
 		84CAA32E1EE55B390021EFD0 /* UITableView+Ex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+Ex.swift"; sourceTree = "<group>"; };
 		84CAA3301EE55F300021EFD0 /* PKHUD+Rx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PKHUD+Rx.swift"; sourceTree = "<group>"; };
-		84CAA3321EE571140021EFD0 /* HandJSON+Rx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "HandJSON+Rx.swift"; sourceTree = "<group>"; };
 		C0F485B7CBED2599046E0E25 /* Pods-RxDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RxDemo/Pods-RxDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		F09228C5B07B550D2BEEC0F0 /* Pods-RxDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-RxDemo/Pods-RxDemo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -82,23 +80,78 @@
 			isa = PBXGroup;
 			children = (
 				844DEEA21EE53E8E0024DECF /* AppDelegate.swift */,
-				844DEEB41EE53F3A0024DECF /* ListViewModel.swift */,
-				84CAA3241EE54F260021EFD0 /* ListViewController.swift */,
-				84CAA3211EE54F090021EFD0 /* ListViewController.xib */,
-				84CAA32A1EE552E20021EFD0 /* Student.swift */,
-				84CAA3261EE550FB0021EFD0 /* StudentCell.swift */,
-				84CAA3271EE550FB0021EFD0 /* StudentCell.xib */,
-				844DEEB61EE53F840024DECF /* ApiProvider.swift */,
-				84CAA31E1EE5497C0021EFD0 /* UIViewController+Rx.swift */,
-				84CAA32C1EE554FE0021EFD0 /* MoyaResponse+Rx.swift */,
-				84CAA3321EE571140021EFD0 /* HandJSON+Rx.swift */,
-				84CAA3301EE55F300021EFD0 /* PKHUD+Rx.swift */,
-				84CAA32E1EE55B390021EFD0 /* UITableView+Ex.swift */,
+				84D224921EE7C2F7005F96C8 /* ViewModel */,
+				84D224931EE7C30C005F96C8 /* Controller */,
+				84D224941EE7C324005F96C8 /* Model */,
+				84D224951EE7C338005F96C8 /* View */,
+				84D224961EE7C351005F96C8 /* Service */,
+				84D224971EE7C364005F96C8 /* _+Rx */,
+				84D224981EE7C3B2005F96C8 /* Ex */,
 				844DEEA91EE53E8E0024DECF /* Assets.xcassets */,
 				844DEEAB1EE53E8E0024DECF /* LaunchScreen.storyboard */,
 				844DEEAE1EE53E8E0024DECF /* Info.plist */,
 			);
 			path = RxDemo;
+			sourceTree = "<group>";
+		};
+		84D224921EE7C2F7005F96C8 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				844DEEB41EE53F3A0024DECF /* ListViewModel.swift */,
+			);
+			name = ViewModel;
+			sourceTree = "<group>";
+		};
+		84D224931EE7C30C005F96C8 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				84CAA3241EE54F260021EFD0 /* ListViewController.swift */,
+				84CAA3211EE54F090021EFD0 /* ListViewController.xib */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		84D224941EE7C324005F96C8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				84CAA32A1EE552E20021EFD0 /* Student.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		84D224951EE7C338005F96C8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				84CAA3261EE550FB0021EFD0 /* StudentCell.swift */,
+				84CAA3271EE550FB0021EFD0 /* StudentCell.xib */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		84D224961EE7C351005F96C8 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				844DEEB61EE53F840024DECF /* ApiProvider.swift */,
+			);
+			name = Service;
+			sourceTree = "<group>";
+		};
+		84D224971EE7C364005F96C8 /* _+Rx */ = {
+			isa = PBXGroup;
+			children = (
+				84CAA31E1EE5497C0021EFD0 /* UIViewController+Rx.swift */,
+				84CAA32C1EE554FE0021EFD0 /* MoyaResponse+Rx.swift */,
+				84CAA3301EE55F300021EFD0 /* PKHUD+Rx.swift */,
+			);
+			name = "_+Rx";
+			sourceTree = "<group>";
+		};
+		84D224981EE7C3B2005F96C8 /* Ex */ = {
+			isa = PBXGroup;
+			children = (
+				84CAA32E1EE55B390021EFD0 /* UITableView+Ex.swift */,
+			);
+			name = Ex;
 			sourceTree = "<group>";
 		};
 		8947BB0A2B829C9F8253BE2C /* Frameworks */ = {
@@ -251,7 +304,6 @@
 				84CAA3281EE550FB0021EFD0 /* StudentCell.swift in Sources */,
 				84CAA3251EE54F260021EFD0 /* ListViewController.swift in Sources */,
 				84CAA32B1EE552E20021EFD0 /* Student.swift in Sources */,
-				84CAA3331EE571140021EFD0 /* HandJSON+Rx.swift in Sources */,
 				844DEEB51EE53F3A0024DECF /* ListViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
