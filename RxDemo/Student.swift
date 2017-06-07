@@ -24,10 +24,6 @@ extension StudentSection: SectionModelType {
     }
 }
 
-struct Students: HandyJSON {
-    var students: [Student]?
-}
-
 struct Student: HandyJSON {
     var name: String? = ""
     var age: Int? = 0
