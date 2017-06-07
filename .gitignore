@@ -4,7 +4,11 @@
 
 ## Build generated
 build/
+<<<<<<< HEAD
 DerivedData/
+=======
+DerivedData
+>>>>>>> dev
 
 ## Various settings
 *.pbxuser
@@ -15,18 +19,30 @@ DerivedData/
 !default.mode2v3
 *.perspectivev3
 !default.perspectivev3
+<<<<<<< HEAD
 xcuserdata/
 
 ## Other
 *.moved-aside
 *.xccheckout
+=======
+xcuserdata
+
+## Other
+*.xccheckout
+*.moved-aside
+*.xcuserstate
+>>>>>>> dev
 *.xcscmblueprint
 
 ## Obj-C/Swift specific
 *.hmap
 *.ipa
+<<<<<<< HEAD
 *.dSYM.zip
 *.dSYM
+=======
+>>>>>>> dev
 
 ## Playgrounds
 timeline.xctimeline
@@ -36,7 +52,10 @@ playground.xcworkspace
 #
 # Add this line if you want to avoid checking in source code from Swift Package Manager dependencies.
 # Packages/
+<<<<<<< HEAD
 # Package.pins
+=======
+>>>>>>> dev
 .build/
 
 # CocoaPods
@@ -56,6 +75,7 @@ Carthage/Build
 
 # fastlane
 #
+<<<<<<< HEAD
 # It is recommended to not store the screenshots in the git repo. Instead, use fastlane to re-generate the
 # screenshots whenever they are needed.
 # For more information about the recommended setup visit:
@@ -65,3 +85,12 @@ fastlane/report.xml
 fastlane/Preview.html
 fastlane/screenshots
 fastlane/test_output
+=======
+# It is recommended to not store the screenshots in the git repo. Instead, use fastlane to re-generate the 
+# screenshots whenever they are needed.
+# For more information about the recommended setup visit:
+# https://github.com/fastlane/fastlane/blob/master/docs/Gitignore.md
+
+fastlane/report.xml
+fastlane/screenshots
+>>>>>>> dev
