@@ -2,11 +2,11 @@
 //  AppDelegate.swift
 //  RxDemo
 //
-//  Created by admin on 05/06/2017.
-//  Copyright © 2017 test. All rights reserved.
-//
+//  Created by redtwowolf on 05/06/2017.
+
 
 import UIKit
+import Moya
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -15,7 +15,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        window = UIWindow(frame: UIScreen.main.bounds)
+        
+        let vm = ListViewModel(provider: RxMoyaProvider<ApiProvider>())
+        let vc = ListViewController(viewModel: vm)
+        let nav = UINavigationController(rootViewController: vc)
+        window?.rootViewController = nav
+        
+        window?.makeKeyAndVisible()
+        
         return true
     }
 

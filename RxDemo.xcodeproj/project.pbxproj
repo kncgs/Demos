@@ -8,12 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		844DEEA31EE53E8E0024DECF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844DEEA21EE53E8E0024DECF /* AppDelegate.swift */; };
-		844DEEA51EE53E8E0024DECF /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844DEEA41EE53E8E0024DECF /* ListViewController.swift */; };
-		844DEEA81EE53E8E0024DECF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 844DEEA61EE53E8E0024DECF /* Main.storyboard */; };
 		844DEEAA1EE53E8E0024DECF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 844DEEA91EE53E8E0024DECF /* Assets.xcassets */; };
 		844DEEAD1EE53E8E0024DECF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 844DEEAB1EE53E8E0024DECF /* LaunchScreen.storyboard */; };
 		844DEEB51EE53F3A0024DECF /* ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844DEEB41EE53F3A0024DECF /* ListViewModel.swift */; };
 		844DEEB71EE53F840024DECF /* ApiProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844DEEB61EE53F840024DECF /* ApiProvider.swift */; };
+		84CAA31F1EE5497C0021EFD0 /* UIViewController+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CAA31E1EE5497C0021EFD0 /* UIViewController+Rx.swift */; };
+		84CAA3231EE54F090021EFD0 /* ListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84CAA3211EE54F090021EFD0 /* ListViewController.xib */; };
+		84CAA3251EE54F260021EFD0 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CAA3241EE54F260021EFD0 /* ListViewController.swift */; };
+		84CAA3281EE550FB0021EFD0 /* StudentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CAA3261EE550FB0021EFD0 /* StudentCell.swift */; };
+		84CAA3291EE550FB0021EFD0 /* StudentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84CAA3271EE550FB0021EFD0 /* StudentCell.xib */; };
+		84CAA32B1EE552E20021EFD0 /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CAA32A1EE552E20021EFD0 /* Student.swift */; };
+		84CAA32D1EE554FE0021EFD0 /* MoyaResponse+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CAA32C1EE554FE0021EFD0 /* MoyaResponse+Rx.swift */; };
+		84CAA32F1EE55B390021EFD0 /* UITableView+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CAA32E1EE55B390021EFD0 /* UITableView+Ex.swift */; };
+		84CAA3311EE55F300021EFD0 /* PKHUD+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CAA3301EE55F300021EFD0 /* PKHUD+Rx.swift */; };
+		84CAA3331EE571140021EFD0 /* HandJSON+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CAA3321EE571140021EFD0 /* HandJSON+Rx.swift */; };
 		CE3A881A83BAD7880DE82642 /* Pods_RxDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63FE9CA13F7DE8EFA0E33D91 /* Pods_RxDemo.framework */; };
 /* End PBXBuildFile section */
 
@@ -21,13 +29,21 @@
 		63FE9CA13F7DE8EFA0E33D91 /* Pods_RxDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RxDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		844DEE9F1EE53E8E0024DECF /* RxDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RxDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		844DEEA21EE53E8E0024DECF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		844DEEA41EE53E8E0024DECF /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
-		844DEEA71EE53E8E0024DECF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		844DEEA91EE53E8E0024DECF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		844DEEAC1EE53E8E0024DECF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		844DEEAE1EE53E8E0024DECF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		844DEEB41EE53F3A0024DECF /* ListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListViewModel.swift; sourceTree = "<group>"; };
 		844DEEB61EE53F840024DECF /* ApiProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiProvider.swift; sourceTree = "<group>"; };
+		84CAA31E1EE5497C0021EFD0 /* UIViewController+Rx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Rx.swift"; sourceTree = "<group>"; };
+		84CAA3211EE54F090021EFD0 /* ListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ListViewController.xib; sourceTree = "<group>"; };
+		84CAA3241EE54F260021EFD0 /* ListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
+		84CAA3261EE550FB0021EFD0 /* StudentCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StudentCell.swift; sourceTree = "<group>"; };
+		84CAA3271EE550FB0021EFD0 /* StudentCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StudentCell.xib; sourceTree = "<group>"; };
+		84CAA32A1EE552E20021EFD0 /* Student.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Student.swift; sourceTree = "<group>"; };
+		84CAA32C1EE554FE0021EFD0 /* MoyaResponse+Rx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MoyaResponse+Rx.swift"; sourceTree = "<group>"; };
+		84CAA32E1EE55B390021EFD0 /* UITableView+Ex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+Ex.swift"; sourceTree = "<group>"; };
+		84CAA3301EE55F300021EFD0 /* PKHUD+Rx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PKHUD+Rx.swift"; sourceTree = "<group>"; };
+		84CAA3321EE571140021EFD0 /* HandJSON+Rx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "HandJSON+Rx.swift"; sourceTree = "<group>"; };
 		C0F485B7CBED2599046E0E25 /* Pods-RxDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RxDemo/Pods-RxDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		F09228C5B07B550D2BEEC0F0 /* Pods-RxDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-RxDemo/Pods-RxDemo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -66,10 +82,18 @@
 			isa = PBXGroup;
 			children = (
 				844DEEA21EE53E8E0024DECF /* AppDelegate.swift */,
-				844DEEA41EE53E8E0024DECF /* ListViewController.swift */,
 				844DEEB41EE53F3A0024DECF /* ListViewModel.swift */,
+				84CAA3241EE54F260021EFD0 /* ListViewController.swift */,
+				84CAA3211EE54F090021EFD0 /* ListViewController.xib */,
+				84CAA32A1EE552E20021EFD0 /* Student.swift */,
+				84CAA3261EE550FB0021EFD0 /* StudentCell.swift */,
+				84CAA3271EE550FB0021EFD0 /* StudentCell.xib */,
 				844DEEB61EE53F840024DECF /* ApiProvider.swift */,
-				844DEEA61EE53E8E0024DECF /* Main.storyboard */,
+				84CAA31E1EE5497C0021EFD0 /* UIViewController+Rx.swift */,
+				84CAA32C1EE554FE0021EFD0 /* MoyaResponse+Rx.swift */,
+				84CAA3321EE571140021EFD0 /* HandJSON+Rx.swift */,
+				84CAA3301EE55F300021EFD0 /* PKHUD+Rx.swift */,
+				84CAA32E1EE55B390021EFD0 /* UITableView+Ex.swift */,
 				844DEEA91EE53E8E0024DECF /* Assets.xcassets */,
 				844DEEAB1EE53E8E0024DECF /* LaunchScreen.storyboard */,
 				844DEEAE1EE53E8E0024DECF /* Info.plist */,
@@ -158,7 +182,8 @@
 			files = (
 				844DEEAD1EE53E8E0024DECF /* LaunchScreen.storyboard in Resources */,
 				844DEEAA1EE53E8E0024DECF /* Assets.xcassets in Resources */,
-				844DEEA81EE53E8E0024DECF /* Main.storyboard in Resources */,
+				84CAA3231EE54F090021EFD0 /* ListViewController.xib in Resources */,
+				84CAA3291EE550FB0021EFD0 /* StudentCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -217,9 +242,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				844DEEA51EE53E8E0024DECF /* ListViewController.swift in Sources */,
+				84CAA32F1EE55B390021EFD0 /* UITableView+Ex.swift in Sources */,
+				84CAA31F1EE5497C0021EFD0 /* UIViewController+Rx.swift in Sources */,
 				844DEEB71EE53F840024DECF /* ApiProvider.swift in Sources */,
+				84CAA32D1EE554FE0021EFD0 /* MoyaResponse+Rx.swift in Sources */,
+				84CAA3311EE55F300021EFD0 /* PKHUD+Rx.swift in Sources */,
 				844DEEA31EE53E8E0024DECF /* AppDelegate.swift in Sources */,
+				84CAA3281EE550FB0021EFD0 /* StudentCell.swift in Sources */,
+				84CAA3251EE54F260021EFD0 /* ListViewController.swift in Sources */,
+				84CAA32B1EE552E20021EFD0 /* Student.swift in Sources */,
+				84CAA3331EE571140021EFD0 /* HandJSON+Rx.swift in Sources */,
 				844DEEB51EE53F3A0024DECF /* ListViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -227,14 +259,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		844DEEA61EE53E8E0024DECF /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				844DEEA71EE53E8E0024DECF /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		844DEEAB1EE53E8E0024DECF /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

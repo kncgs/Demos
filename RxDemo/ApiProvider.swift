@@ -15,21 +15,22 @@ public enum ApiProvider {
 
 extension ApiProvider: TargetType {
     
-    public var baseURL: URL { return URL(string: "")! }
+    // http://localhost:3000/students
+    public var baseURL: URL { return URL(string: "http://localhost:3000")! }
     
     public var path: String {
         switch self {
         case .students:
-            return ""
+            return "/students"
         }
     }
     
     public var method: Moya.Method {
-        return .post
+        return .get
     }
     
     public var parameters: [String: Any]? {
-        return [:]
+        return nil
     }
     
     public var parameterEncoding: ParameterEncoding {

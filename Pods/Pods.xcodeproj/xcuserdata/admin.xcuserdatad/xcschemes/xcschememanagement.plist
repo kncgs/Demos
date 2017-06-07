@@ -19,6 +19,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>PKHUD.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-RxDemo.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -34,6 +39,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>RxDataSources.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>RxSwift.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -44,10 +54,15 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>RxSwiftUtilities.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>19CBEB10FA69D03338EFE570C858D3A8</key>
+		<key>0B2EFF954C3D417B431D1783E33172B8</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -62,22 +77,37 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>58A7A00DD9A1912BC1AB7139A05EBD56</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>5ECCA064F79660493C880346E0E38916</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>88E9EC28B8B46C3631E6B242B50F4442</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>9B95E4F21213195608C1233321ECEC85</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>A3596AED310F467C89F9E3244B86D188</key>
+		<key>91A9C281C8D81B0662A55CE25407DD31</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>C419A9BCC9AACDC44A26B80764B6B554</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>CE9C78F7F4D8E200F3CCB7D0F4645FC7</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>D7A75F149082140741FC1E0B5B2863C8</key>
 		<dict>
 			<key>primary</key>
 			<true/>

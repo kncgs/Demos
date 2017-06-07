@@ -11,5 +11,8 @@ target 'RxDemo' do
   pod 'RxSwiftExt'
   pod 'Moya/RxSwift'
   pod 'HandyJSON'
+  pod 'RxDataSources'
+  pod 'RxSwiftUtilities'
+  pod 'PKHUD'
 
 end
