@@ -18,12 +18,14 @@ class ListViewModel: NSObject {
     let viewDidLoad: PublishSubject<Void> = .init()
     
     
-    let navigationBarTitle: Driver<String> = .just("Students")
+    let navigationBarTitle: Driver<String>
     let loading: Driver<Bool>
     let section: Driver<[StudentSection]>
     
     
     init(provider: RxMoyaProvider<ApiProvider>) {
+        
+        navigationBarTitle = .just("Students")
         
         let activityIndicator = ActivityIndicator()
         loading = activityIndicator.asDriver()
@@ -42,7 +44,6 @@ class ListViewModel: NSObject {
                     [StudentSection(items: $0)]
                 }
                 .asDriver(onErrorJustReturn: [])
-    
     }
     
 }

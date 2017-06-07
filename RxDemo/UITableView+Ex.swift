@@ -12,11 +12,8 @@ extension UITableView {
         register(UINib(nibName: String(describing: cell), bundle: nil), forCellReuseIdentifier: String(describing: cell))
     }
     
-    func registerCell<T: UITableViewCell>(_ cell: T.Type) {
-        register(cell, forCellReuseIdentifier: String(describing: cell))
-    }
     func dequeueCell<T: UITableViewCell>(_ type: T.Type, for indexPath: IndexPath) -> T {
-        return dequeueReusableCell(withIdentifier: "StudentCell", for: indexPath) as! T
+        return dequeueReusableCell(withIdentifier: String(describing: type), for: indexPath) as! T
     }
 
 }

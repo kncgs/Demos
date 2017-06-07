@@ -13,11 +13,11 @@ import PKHUD
 
 class ListViewController: UIViewController {
     
+    @IBOutlet private weak var tableView: UITableView!
+    
     private let disposedBag = DisposeBag()
     
-    @IBOutlet weak var tableView: UITableView!
     private let dataSource = RxTableViewSectionedReloadDataSource<StudentSection>()
-    
     
     convenience init(viewModel: ListViewModel) {
         self.init(nibName: "ListViewController", bundle: nil)
@@ -37,18 +37,18 @@ class ListViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.registerCell(StudentCell.self)
+        configUI()
+    }
+    
+    private func configUI() {
         tableView.tableFooterView = UIView()
-        
+        tableView.rowHeight = 60
+        tableView.registerNibCell(StudentCell.self)
         dataSource.configureCell = { ds, tv, idx, model in
             let cell = tv.dequeueCell(StudentCell.self, for: idx)
             cell.config(model)
             return cell
         }
-    }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
     }
     
     private func configRx(_ viewModel: ListViewModel) {
@@ -65,7 +65,5 @@ class ListViewController: UIViewController {
             .drive(tableView.rx.items(dataSource: dataSource))
             .disposed(by: disposedBag)
     }
-
-
 }
 
