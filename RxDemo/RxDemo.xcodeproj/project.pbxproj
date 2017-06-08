@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		843EF54D1EE952330037EBDB /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843EF54B1EE952330037EBDB /* DetailViewController.swift */; };
+		843EF54E1EE952330037EBDB /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 843EF54C1EE952330037EBDB /* DetailViewController.xib */; };
+		843EF5501EE952520037EBDB /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843EF54F1EE952520037EBDB /* DetailViewModel.swift */; };
 		844DEEA31EE53E8E0024DECF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844DEEA21EE53E8E0024DECF /* AppDelegate.swift */; };
 		844DEEAA1EE53E8E0024DECF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 844DEEA91EE53E8E0024DECF /* Assets.xcassets */; };
 		844DEEAD1EE53E8E0024DECF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 844DEEAB1EE53E8E0024DECF /* LaunchScreen.storyboard */; };
@@ -26,6 +29,9 @@
 
 /* Begin PBXFileReference section */
 		63FE9CA13F7DE8EFA0E33D91 /* Pods_RxDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RxDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		843EF54B1EE952330037EBDB /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		843EF54C1EE952330037EBDB /* DetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
+		843EF54F1EE952520037EBDB /* DetailViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
 		844DEE9F1EE53E8E0024DECF /* RxDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RxDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		844DEEA21EE53E8E0024DECF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		844DEEA91EE53E8E0024DECF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -58,6 +64,43 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		843EF5491EE9520D0037EBDB /* List */ = {
+			isa = PBXGroup;
+			children = (
+				84D224921EE7C2F7005F96C8 /* ViewModel */,
+				84D224931EE7C30C005F96C8 /* Controller */,
+				84D224941EE7C324005F96C8 /* Model */,
+				84D224951EE7C338005F96C8 /* View */,
+			);
+			name = List;
+			sourceTree = "<group>";
+		};
+		843EF54A1EE952180037EBDB /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				843EF5521EE952830037EBDB /* Controller */,
+				843EF5511EE952790037EBDB /* ViewModel */,
+			);
+			name = Detail;
+			sourceTree = "<group>";
+		};
+		843EF5511EE952790037EBDB /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				843EF54F1EE952520037EBDB /* DetailViewModel.swift */,
+			);
+			name = ViewModel;
+			sourceTree = "<group>";
+		};
+		843EF5521EE952830037EBDB /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				843EF54B1EE952330037EBDB /* DetailViewController.swift */,
+				843EF54C1EE952330037EBDB /* DetailViewController.xib */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
 		844DEE961EE53E8E0024DECF = {
 			isa = PBXGroup;
 			children = (
@@ -80,10 +123,8 @@
 			isa = PBXGroup;
 			children = (
 				844DEEA21EE53E8E0024DECF /* AppDelegate.swift */,
-				84D224921EE7C2F7005F96C8 /* ViewModel */,
-				84D224931EE7C30C005F96C8 /* Controller */,
-				84D224941EE7C324005F96C8 /* Model */,
-				84D224951EE7C338005F96C8 /* View */,
+				843EF5491EE9520D0037EBDB /* List */,
+				843EF54A1EE952180037EBDB /* Detail */,
 				84D224961EE7C351005F96C8 /* Service */,
 				84D224971EE7C364005F96C8 /* _+Rx */,
 				84D224981EE7C3B2005F96C8 /* Ex */,
@@ -235,6 +276,7 @@
 			files = (
 				844DEEAD1EE53E8E0024DECF /* LaunchScreen.storyboard in Resources */,
 				844DEEAA1EE53E8E0024DECF /* Assets.xcassets in Resources */,
+				843EF54E1EE952330037EBDB /* DetailViewController.xib in Resources */,
 				84CAA3231EE54F090021EFD0 /* ListViewController.xib in Resources */,
 				84D2249C1EE7C64C005F96C8 /* StudentCell.xib in Resources */,
 			);
@@ -295,12 +337,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				843EF54D1EE952330037EBDB /* DetailViewController.swift in Sources */,
 				84CAA32F1EE55B390021EFD0 /* UITableView+Ex.swift in Sources */,
 				84CAA31F1EE5497C0021EFD0 /* UIViewController+Rx.swift in Sources */,
 				844DEEB71EE53F840024DECF /* ApiProvider.swift in Sources */,
 				84CAA32D1EE554FE0021EFD0 /* MoyaResponse+Rx.swift in Sources */,
 				84CAA3311EE55F300021EFD0 /* PKHUD+Rx.swift in Sources */,
 				84D2249B1EE7C64C005F96C8 /* StudentCell.swift in Sources */,
+				843EF5501EE952520037EBDB /* DetailViewModel.swift in Sources */,
 				844DEEA31EE53E8E0024DECF /* AppDelegate.swift in Sources */,
 				84CAA3251EE54F260021EFD0 /* ListViewController.swift in Sources */,
 				84CAA32B1EE552E20021EFD0 /* Student.swift in Sources */,

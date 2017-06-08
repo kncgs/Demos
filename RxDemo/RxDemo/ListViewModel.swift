@@ -21,6 +21,7 @@ class ListViewModel: NSObject {
     let navigationBarTitle: Driver<String>
     let loading: Driver<Bool>
     let section: Driver<[StudentSection]>
+    let showResponseHUD: Driver<RxHUDValue>
     
     
     init(provider: RxMoyaProvider<ApiProvider>) {
@@ -30,13 +31,27 @@ class ListViewModel: NSObject {
         let activityIndicator = ActivityIndicator()
         loading = activityIndicator.asDriver()
         
-        section =
+        let successHUD = RxHUDValue(type: .label("获取数据成功"))
+        let failHUD = RxHUDValue(type: .label("发生错误"))
+        
+        let request =
             viewDidLoad
                 .flatMap {
                     provider
                         .request(.students)
                         .trackActivity(activityIndicator)
                 }
+                .shareReplay(1)
+        
+        
+        showResponseHUD =
+            request
+                .filter(statusCode: 200)
+                .map { _ in successHUD }
+                .asDriver(onErrorJustReturn: failHUD)
+        
+        section =
+            request
                 .filter(statusCode: 200)
                 .mapModels(Student.self)
                 .map { $0.map { $0! } }
