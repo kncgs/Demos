@@ -16,12 +16,14 @@ import RxSwiftUtilities
 class ListViewModel: NSObject {
     
     let viewDidLoad: PublishSubject<Void> = .init()
+    let itemSelected: PublishSubject<IndexPath> = .init()
     
     
     let navigationBarTitle: Driver<String>
     let loading: Driver<Bool>
     let section: Driver<[StudentSection]>
     let showResponseHUD: Driver<RxHUDValue>
+    let pushDetailViewModel: Driver<DetailViewModel>
     
     
     init(provider: RxMoyaProvider<ApiProvider>) {
@@ -59,6 +61,18 @@ class ListViewModel: NSObject {
                     [StudentSection(items: $0)]
                 }
                 .asDriver(onErrorJustReturn: [])
+        
+        pushDetailViewModel =
+            Observable
+                .combineLatest(
+                    section.asObservable(),
+                    itemSelected.asObserver()
+                )
+                .filter { !$0.0.isEmpty }
+                .map { $0.0[0].items[$0.1.row] }
+                .map { DetailViewModel(provider, student: $0) }
+                .asDriverOnErrorJustComplete()
+            
     }
     
 }

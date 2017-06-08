@@ -36,8 +36,8 @@
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Xeu-ZZ-I6C">
-                    <rect key="frame" x="174.5" y="221" width="25" height="30"/>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Xeu-ZZ-I6C">
+                    <rect key="frame" x="30" y="221" width="315" height="30"/>
                     <nil key="textColor"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
@@ -46,7 +46,7 @@
                     <rect key="frame" x="30" y="321" width="31" height="30"/>
                     <state key="normal" title="取消"/>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rVW-cc-T8z">
+                <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rVW-cc-T8z">
                     <rect key="frame" x="314" y="321" width="31" height="30"/>
                     <state key="normal" title="确定"/>
                 </button>
@@ -57,7 +57,8 @@
                 <constraint firstItem="ZD1-tj-r33" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="30" id="8Z6-zM-rIr"/>
                 <constraint firstItem="rVW-cc-T8z" firstAttribute="top" secondItem="AiU-bV-f2e" secondAttribute="bottom" constant="200" id="BHA-iX-8l0"/>
                 <constraint firstItem="SwR-Ru-3oz" firstAttribute="top" secondItem="ZD1-tj-r33" secondAttribute="bottom" constant="200" id="HBQ-41-48z"/>
-                <constraint firstItem="Xeu-ZZ-I6C" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="QcQ-LU-a27"/>
+                <constraint firstAttribute="trailing" secondItem="Xeu-ZZ-I6C" secondAttribute="trailing" constant="30" id="W24-C8-nv0"/>
+                <constraint firstItem="Xeu-ZZ-I6C" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="30" id="WnE-uT-6t3"/>
                 <constraint firstItem="ZD1-tj-r33" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="100" id="aid-Sn-KHB"/>
                 <constraint firstAttribute="trailing" secondItem="rVW-cc-T8z" secondAttribute="trailing" constant="30" id="bst-Kq-51g"/>
                 <constraint firstItem="AiU-bV-f2e" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="100" id="fvi-rC-BTZ"/>

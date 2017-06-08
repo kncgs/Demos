@@ -53,6 +53,11 @@ class ListViewController: UIViewController {
     
     private func configRx(_ viewModel: ListViewModel) {
         
+        tableView.rx
+            .itemSelected
+            .bind(to: viewModel.itemSelected)
+            .disposed(by: disposedBag)
+        
         viewModel.navigationBarTitle
             .drive(self.rx.title)
             .disposed(by: disposedBag)
@@ -63,6 +68,13 @@ class ListViewController: UIViewController {
         
         viewModel.section
             .drive(tableView.rx.items(dataSource: dataSource))
+            .disposed(by: disposedBag)
+        
+        viewModel.pushDetailViewModel
+            .drive(onNext: { [unowned self] vm in
+                let vc = DetailViewController(viewModel: vm)
+                self.navigationController?.pushViewController(vc, animated: true)
+            })
             .disposed(by: disposedBag)
     }
 }
