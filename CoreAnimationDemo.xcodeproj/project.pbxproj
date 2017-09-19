@@ -16,6 +16,7 @@
 		8413FFEF1F71051200C99EB8 /* RememberView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8413FFEE1F71051200C99EB8 /* RememberView.xib */; };
 		8413FFF31F7125FE00C99EB8 /* UIView+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8413FFF21F7125FE00C99EB8 /* UIView+Ex.swift */; };
 		8413FFF51F71337E00C99EB8 /* Int+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8413FFF41F71337E00C99EB8 /* Int+Ex.swift */; };
+		8413FFF71F713E9F00C99EB8 /* DispatchQueue+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8413FFF61F713E9F00C99EB8 /* DispatchQueue+Ex.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		8413FFEE1F71051200C99EB8 /* RememberView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RememberView.xib; sourceTree = "<group>"; };
 		8413FFF21F7125FE00C99EB8 /* UIView+Ex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Ex.swift"; sourceTree = "<group>"; };
 		8413FFF41F71337E00C99EB8 /* Int+Ex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Int+Ex.swift"; sourceTree = "<group>"; };
+		8413FFF61F713E9F00C99EB8 /* DispatchQueue+Ex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DispatchQueue+Ex.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 				8413FFEE1F71051200C99EB8 /* RememberView.xib */,
 				8413FFF21F7125FE00C99EB8 /* UIView+Ex.swift */,
 				8413FFF41F71337E00C99EB8 /* Int+Ex.swift */,
+				8413FFF61F713E9F00C99EB8 /* DispatchQueue+Ex.swift */,
 				8413FFE11F71040F00C99EB8 /* Assets.xcassets */,
 				8413FFE31F71040F00C99EB8 /* LaunchScreen.storyboard */,
 				8413FFE61F71040F00C99EB8 /* Info.plist */,
@@ -149,6 +152,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8413FFF71F713E9F00C99EB8 /* DispatchQueue+Ex.swift in Sources */,
 				8413FFF51F71337E00C99EB8 /* Int+Ex.swift in Sources */,
 				8413FFDD1F71040F00C99EB8 /* ViewController.swift in Sources */,
 				8413FFED1F7104FC00C99EB8 /* RememberView.swift in Sources */,

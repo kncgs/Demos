@@ -36,6 +36,9 @@ class RememberView: UIView, Shadowable {
         shadow()
         
         phoneTextField.delegate = self
+        
+        
+        
     }
     
     func addBorder() {
@@ -53,6 +56,11 @@ class RememberView: UIView, Shadowable {
     }
     
     @IBAction func payBtnClicked(_ sender: UIButton) {
+        
+        configPayBtn(.push("Sending", .gray))
+        DispatchQueue.mainDelay(1.5) {
+            self.configPayBtn(.pop("Sent", .green))
+        }
     }
     
     @IBAction func switchValueChanged(_ sender: UISwitch) {
@@ -80,14 +88,31 @@ class RememberView: UIView, Shadowable {
         foldView.frame = CGRect(x: headerView.frame.origin.x,
                                 y: headerView.frame.maxY - headerView.layer.borderWidth,
                                 width: headerView.bounds.width,
-                                height: 80)
+                                height: 100)
             
         payBtn.frame.origin.y = foldView.frame.maxY + 10
         frame.size.height = payBtn.frame.maxY + 10
     }
+    
+    
+    func configPayBtn(_ type: TransitionType) {
+        payBtn.titleLabel?.layer.addTransition()
+        
+        switch type {
+        case let .none(text, color),
+             let .push(text, color),
+             let .pop(text, color):
+            payBtn.setTitle(text, for: .normal)
+            payBtn.setTitleColor(color, for: .normal)
+        }
+    }
 }
 
-
+enum TransitionType {
+    case none(String, UIColor)
+    case push(String, UIColor)
+    case pop(String, UIColor)
+}
 
 extension RememberView: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {

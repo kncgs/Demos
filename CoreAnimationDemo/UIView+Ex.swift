@@ -41,3 +41,13 @@ extension UIView {
         layer.cornerRadius = 4.0
     }
 }
+
+extension CALayer {
+    func addTransition() {
+        let transition = CATransition()
+        transition.type = kCATransitionPush
+        transition.subtype = kCATransitionFromTop
+        transition.duration = 0.5
+        add(transition, forKey: kCATransition)
+    }
+}
