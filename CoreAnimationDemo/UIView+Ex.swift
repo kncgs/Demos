@@ -50,4 +50,21 @@ extension CALayer {
         transition.duration = 0.5
         add(transition, forKey: kCATransition)
     }
+    
+    func shake() {
+        let values = [-5, 5, -5, 5, -3, 3, -2, 2, 0]
+        
+        let translation = CAKeyframeAnimation(keyPath: "transform.translation.x")
+        translation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionLinear)
+        translation.values = values
+        
+        let rotation = CAKeyframeAnimation(keyPath: "transform.rotation.y");
+        rotation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionLinear)
+        rotation.values = values.map { $0.toRadian }
+        
+        let group = CAAnimationGroup()
+        group.animations = [translation, rotation]
+        group.duration = 0.6
+        add(group, forKey: "shakeIt")
+    }
 }

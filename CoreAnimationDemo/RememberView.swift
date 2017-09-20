@@ -15,12 +15,16 @@ class RememberView: UIView, Shadowable {
             .instantiate(withOwner: nil, options: nil)
             .first as! RememberView
     }
+    
+    // MARK: - Properties
 
     @IBOutlet weak var payBtn: UIButton!
     @IBOutlet weak var phoneTextField: UITextField!
     @IBOutlet weak var headerView: UIView!
     @IBOutlet weak var foldView: UIView!
     
+    
+    // MARK: - Life Cycle
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -36,27 +40,22 @@ class RememberView: UIView, Shadowable {
         shadow()
         
         phoneTextField.delegate = self
-        
-        
-        
     }
-    
-    func addBorder() {
-        border()
-        headerView.border()
-        foldView.border()
-        phoneTextField.border()
-        payBtn.border()
-    }
-    
+
     override func layoutSubviews() {
         super.layoutSubviews()
         
         layout()
     }
     
+    
+    // MARK: - IBAction
+    
     @IBAction func payBtnClicked(_ sender: UIButton) {
-        
+        guard let text = phoneTextField.text, !text.isEmpty else {
+            layer.shake()
+            return
+        }
         configPayBtn(.push("Sending", .gray))
         DispatchQueue.mainDelay(1.5) {
             self.configPayBtn(.pop("Sent", .green))
@@ -72,30 +71,40 @@ class RememberView: UIView, Shadowable {
                        options: .allowAnimatedContent,
                        animations: {
                         
-            self.folding(by: sender.isOn)
+                        self.folding(by: sender.isOn)
                         
         }, completion: nil)
-        
     }
     
-    func folding(by on: Bool) {
-        let angle = on ? 0 : -90
-        foldView.layer.transform = CATransform3DMakeRotation(angle.toRadian, 1, 0, 0)
-        layout()
-    }
     
-    func layout() {
+    // MARK: - Private Func
+    
+    private func addBorder() {
+        border()
+        headerView.border()
+        foldView.border()
+        phoneTextField.border()
+        payBtn.border()
+    }
+
+    private func layout() {
         foldView.frame = CGRect(x: headerView.frame.origin.x,
                                 y: headerView.frame.maxY - headerView.layer.borderWidth,
                                 width: headerView.bounds.width,
                                 height: 100)
-            
+        
         payBtn.frame.origin.y = foldView.frame.maxY + 10
         frame.size.height = payBtn.frame.maxY + 10
     }
     
     
-    func configPayBtn(_ type: TransitionType) {
+    private func folding(by on: Bool) {
+        let angle = on ? 0 : -90
+        foldView.layer.transform = CATransform3DMakeRotation(angle.toRadian, 1, 0, 0)
+        layout()
+    }
+    
+    private func configPayBtn(_ type: TransitionType) {
         payBtn.titleLabel?.layer.addTransition()
         
         switch type {
@@ -113,6 +122,9 @@ enum TransitionType {
     case push(String, UIColor)
     case pop(String, UIColor)
 }
+
+
+// MARK: - UITextFieldDelegate
 
 extension RememberView: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
